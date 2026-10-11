@@ -1,13 +1,22 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { navigation } from "@/data/studio";
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  useEffect(() => {
+    const close = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
   return (
-    <header className={`site-header ${pathname === "/" ? "over-image" : ""}`}>
+    <header
+      className={`site-header quiet-header ${pathname === "/" ? "over-image" : ""}`}
+    >
       <Link
         className="wordmark"
         href="/"
@@ -36,7 +45,6 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
           >
             {item.label}
-            <span></span>
           </Link>
         ))}
       </nav>

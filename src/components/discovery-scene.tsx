@@ -24,8 +24,8 @@ export function DiscoveryScene() {
   return (
     <>
       <PanoramaRoom onSelect={openObject} />
-      <section className="collection-index">
-        <p className="eyebrow">In this room</p>
+      <details className="collection-index">
+        <summary>View the collection</summary>
         <div className="object-index" aria-label="Accessible collection list">
           {roomObjects.map((item) => (
             <button key={item.id} onClick={() => openObject(item)}>
@@ -34,7 +34,7 @@ export function DiscoveryScene() {
             </button>
           ))}
         </div>
-      </section>
+      </details>
       <dialog
         ref={dialog}
         className="object-dialog"
@@ -80,9 +80,7 @@ export function DiscoveryScene() {
             </p>
           )}
           <p className="small">
-            Illustrative antique selection. These are concept objects, not
-            verified pieces from the creative director’s collection. Provenance,
-            dimensions and pricing will be supplied with the actual collection.
+            Concept piece. Final collection details to follow.
           </p>
         </div>
       </dialog>

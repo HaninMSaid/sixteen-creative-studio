@@ -10,7 +10,6 @@ export function TextLink({
   return (
     <Link className="text-link" href={href}>
       {children}
-      <span aria-hidden="true"></span>
     </Link>
   );
 }
@@ -39,20 +38,20 @@ export function Photo({
 }
 export function Footer() {
   return (
-    <footer className="site-footer">
-      <div>
-        <Link className="footer-brand" href="/">
-          sixteen
-        </Link>
-        <p>Private and selective. Always.</p>
+    <footer className="site-footer quiet-footer">
+      <Link className="footer-brand" href="/">
+        sixteen
+      </Link>
+      <div className="footer-links">
+        <Link href="/consultations">Contact</Link>
+        <details className="image-notes">
+          <summary>Image credits</summary>
+          <p>
+            Entrance, interior and antique scenes are concept imagery. Project
+            photographs are temporary references, not the completed NK Villa.
+          </p>
+        </details>
       </div>
-      <div>
-        <p>Spaces. Objects. Perspectives.</p>
-        <p className="sample-note">
-          Design preview · Sample photography & content
-        </p>
-      </div>
-      <Link href="/consultations">Start a conversation </Link>
     </footer>
   );
 }

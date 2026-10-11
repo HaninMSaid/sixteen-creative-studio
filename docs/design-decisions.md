@@ -30,3 +30,11 @@ No downloaded template, purchased font, actual client plan or reference website 
 ## Continuous homepage revision
 
 The user rejected separate homepage sections. A single sticky image canvas now connects five beats: feeling → detail → Villa 16 → personal collection → client story. Image framing, crossfades and text move with native scrolling; no scroll hijacking or carousel timer is used. A chapter rail provides direct access, with a static reading alternative for reduced-motion users. Deployment to a client-accessible preview is now explicitly requested. GitHub source remains private.
+
+## Minimal visitor-facing revision — 12 October 2026
+
+The user wants the prototype to look like the finished website, without guidance scattered across the layout. The homepage now keeps one short line per visual moment; the explanatory paragraphs, eyebrows, chapter rail, progress count and image-note overlays are removed. Navigation is tucked behind Menu on desktop and mobile. The footer contains the wordmark, contact and expandable image credits. Room viewpoints and the accessible collection list are disclosed on request. Brief notices remain at object/enquiry/booking decisions so sample content does not imply a real product or booking.
+
+## Entrance-led visual journey
+
+The user's requested opening is a dark metal house number 16 with an amber downlight and expressive cast shadows. The first scene has no visible headline; only the studio wordmark and Menu overlay the photograph. Five distinct images now connect the approach, doorway, material detail, Villa 16 reference and antique collection. New assets were generated for the entrance, interior threshold and material junction. They are concepts, not actual client photography.

@@ -35,15 +35,6 @@ export function HomeStory() {
   }, []);
   const position = Math.max(0, Math.min(4, progress * 4.7 - 0.3));
   const current = Math.round(position);
-  function goTo(index: number) {
-    if (!journey.current) return;
-    const top = window.scrollY + journey.current.getBoundingClientRect().top;
-    const travel = journey.current.offsetHeight - window.innerHeight;
-    window.scrollTo({
-      top: top + ((index + 0.3) / 4.7) * travel,
-      behavior: reduced ? "instant" : "smooth",
-    });
-  }
   if (reduced)
     return (
       <section className="reduced-story" id="studio">
@@ -51,13 +42,9 @@ export function HomeStory() {
           <article key={beat.id}>
             <Image src={beat.image} alt={beat.alt} fill sizes="100vw" />
             <div>
-              <p className="eyebrow">{beat.eyebrow}</p>
-              <h1>
-                {beat.title[0]}
-                <br />
-                <em>{beat.title[1]}</em>
+              <h1 className={beat.title ? undefined : "sr-only"}>
+                {beat.title ?? "Sixteen Creative Studio"}
               </h1>
-              <p>{beat.text}</p>
               {beat.href && (
                 <Link className="story-action" href={beat.href}>
                   {beat.action}
@@ -85,7 +72,7 @@ export function HomeStory() {
                 className="story-image"
                 style={{
                   opacity,
-                  transform: `scale(${beat.scale + Math.max(-0.02, Math.min(0.06, (position - i) * 0.05))})`,
+                  transform: `scale(${Math.max(1, beat.scale + Math.max(-0.02, Math.min(0.06, (position - i) * 0.05)))})`,
                 }}
               >
                 <Image
@@ -116,13 +103,9 @@ export function HomeStory() {
                   transform: `translateY(${Math.max(-45, Math.min(45, -distance * 55))}px)`,
                 }}
               >
-                <p className="eyebrow">{beat.eyebrow}</p>
-                <h1>
-                  {beat.title[0]}
-                  <br />
-                  <em>{beat.title[1]}</em>
+                <h1 className={beat.title ? undefined : "sr-only"}>
+                  {beat.title ?? "Sixteen Creative Studio"}
                 </h1>
-                <p className="story-paragraph">{beat.text}</p>
                 {beat.href && (
                   <Link className="story-action" href={beat.href}>
                     {beat.action}
@@ -132,37 +115,6 @@ export function HomeStory() {
             );
           })}
         </div>
-        <div className="story-rail">
-          <p className="story-scroll-cue">
-            {current === 4
-              ? "The next chapter is yours"
-              : "Scroll to follow the story"}
-          </p>
-          <nav aria-label="Story chapters">
-            {storyBeats.map((beat, i) => (
-              <button
-                key={beat.id}
-                onClick={() => goTo(i)}
-                aria-current={current === i ? "step" : undefined}
-              >
-                <span>0{i + 1}</span>
-                {beat.label}
-              </button>
-            ))}
-          </nav>
-          <span className="story-count">
-            0{current + 1}
-            <i> / 05</i>
-          </span>
-        </div>
-        <div className="story-progress" aria-hidden="true">
-          <span style={{ transform: `scaleX(${progress})` }} />
-        </div>
-        <p className="story-image-credit">
-          {current === 2
-            ? "NK Villa atmosphere reference · final photography to follow"
-            : "Illustrative atmosphere · antique concept study"}
-        </p>
       </div>
     </section>
   );

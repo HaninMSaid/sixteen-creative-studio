@@ -17,3 +17,25 @@ Final prompt:
 ## Quality notes
 
 The panorama is a generated illustrative room with a 2:1 image ratio, not a surveyed or stitched photograph. The requested resolution was not guaranteed by the generator. Final production imagery should use a high-resolution approved 360° capture/render; seam quality, object silhouette masks and provenance must be reviewed again against that final asset.
+
+## No. 16 entrance sequence — 12 October 2026
+
+Built-in ImageGen produced three new project assets for the user's entrance-to-interior narrative. These remain conceptual imagery, not verified NK Villa photography.
+
+### `public/images/entrance-16.png`
+
+Final prompt:
+
+> Photorealistic architectural editorial photograph, landscape 16:9, full-bleed homepage hero for Sixteen Creative Studio. A close and beautifully composed view of an exclusive private house entrance at blue hour/night. Hero subject: the exact house number '16', two individually mounted sculptural matte black / very dark bronze steel numerals on a textured warm limestone wall. A discreet slim bronze architectural downlight directly ABOVE the number casts rich warm amber-yellow light downward, causing striking elongated sharply legible shadows from the raised metal 1 and 6 onto the stone below and slightly sideways. Make the cast shadow a key artistic feature, physically plausible. Number 16 clearly readable, elegant refined architectural numerals, not enormous signage. Tight editorial framing: number and light in centre-right at eye level, dark recessed entrance doorway just visible along the far left as an invitation to enter; exquisite stone texture, warm pools of amber light fading into deep brown darkness. Sophisticated, intimate, mysterious, minimal. This is one real-feeling cinematic photograph, not a website mockup, no text except the actual mounted numerals 16, no logos, no plants, no extra address numbers, no interface. Leave quiet darker space around the composition. Conceptual house, not a claimed photo of a real client project.
+
+### `public/images/threshold-16.png`
+
+Final prompt:
+
+> Photorealistic architectural editorial interior photograph for a luxury creative studio homepage, landscape 16:9. The next photograph in a visual story after a dark bronze house number 16 illuminated with warm amber light on a limestone exterior: we have now crossed the threshold. Camera at standing eye level just inside an elegant dark bronze entrance door, looking along a warm limestone passage into a quiet high-ceilinged living space. A carved old walnut console in the middle distance, one large abstract earthy artwork, soft linen drapery, muted warm ivory plaster, very restrained furniture. Architecture and proportions lead. Warm amber architectural lighting blends with late afternoon light at the far end. A rich shadowed foreground door frame creates a layered reveal into the interior; inviting warm light beyond. Material-rich, personal, editorial and beautifully composed, not a generic real-estate photo, not a furniture store. Slightly asymmetrical, cinematic deep perspective, understated luxury, tactile natural imperfections. No people, no text, no UI, no logos. A conceptual house interior, not any existing client's project.
+
+### `public/images/material-detail.png`
+
+Final prompt:
+
+> Photorealistic architectural material-detail photograph, landscape 16:9. A quiet intimate close-up inside a private limestone-and-walnut house: the precise junction of beautifully aged dark walnut joinery, a substantial honed warm travertine ledge with open pores, and a patinated bronze recessed handle. Soft warm amber light skims from above and left, revealing grain, the precise shadow gap and rich tactile texture. One small worn ceramic vessel sits partially in frame on the ledge, deliberately cropped. Shallow-to-medium depth of field, editorial architectural photography, elegant abstract geometry, earth tones, deep warm shadows, crafted permanence. Not a sample board, no swatches, no product catalogue layout. This is a different close shot that belongs to a cinematic house tour after an entrance and interior reveal. No people, text, UI, logos or watermark. Conceptual material study only.

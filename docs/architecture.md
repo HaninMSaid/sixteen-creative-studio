@@ -4,7 +4,7 @@ Next.js App Router pages compose shared presentation components. Typed records l
 
 ## Main responsibilities
 
-- `home-story.tsx`: one persistent full-screen canvas, with five story beats driven continuously by native scroll position. Shared images crossfade and change framing; chapter navigation and reduced-motion reading mode keep the story accessible. `story.ts` holds narrative content and image choices.
+- `home-story.tsx`: one persistent full-screen canvas, with five story beats driven continuously by native scroll position. Distinct images crossfade and change framing; a reduced-motion reading mode provides a static alternative. `story.ts` holds narrative content and image choices.
 - `panorama-room.tsx`: Three.js room renderer, camera movement, pointer and keyboard controls, polygon raycasting and hover tint. Dynamically loaded with server rendering disabled.
 - `discovery-scene.tsx`: collection list and native object-detail dialog; owns selected object and enquiry preview state.
 - `collection.ts`: antique details, camera targets and silhouette polygons, measured in normalized equirectangular image coordinates.

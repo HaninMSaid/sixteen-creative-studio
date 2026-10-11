@@ -231,9 +231,7 @@ export function PanoramaRoom({ onSelect }: Props) {
         tabIndex={0}
       />
       <div className="room-heading">
-        <p className="eyebrow">Objects of desire</p>
-        <h1>The collector’s room.</h1>
-        <p>Stand still. Look around. Find something unexpected.</p>
+        <h1>Objects of desire.</h1>
       </div>
       {loading && (
         <p className="room-loading" role="status">
@@ -249,27 +247,23 @@ export function PanoramaRoom({ onSelect }: Props) {
       <div className="room-hover" aria-live="polite">
         {hovered && (
           <>
-            <span>DISCOVER</span>
             <p>{hovered}</p>
           </>
         )}
       </div>
-      <div className="room-controls">
-        <span className="room-instructions">
-          Drag to look around · Select an object
-        </span>
-        <div className="corner-controls" aria-label="Look toward a room corner">
-          {roomObjects.map((item) => (
-            <button key={item.id} onClick={() => moveTo.current(item)}>
-              {item.corner}
-            </button>
-          ))}
-        </div>
-        <span className="room-degree">360°</span>
+      <div className="room-controls quiet-room-controls">
+        <span className="room-instructions">Drag to explore</span>
+        <details className="room-directions">
+          <summary>Views</summary>
+          <div className="corner-controls" aria-label="Room viewpoints">
+            {roomObjects.map((item) => (
+              <button key={item.id} onClick={() => moveTo.current(item)}>
+                {item.corner}
+              </button>
+            ))}
+          </div>
+        </details>
       </div>
-      <p className="room-concept">
-        Illustrative antique interior · Concept imagery
-      </p>
     </div>
   );
 }
