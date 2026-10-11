@@ -22,7 +22,7 @@ The `out/` directory can be deployed to a static host supporting clean URLs. No 
 
 ## Today's four destinations
 
-- `/` — studio introduction, selected work, spatial collection preview and consultation invitation.
+- `/` — one continuous visual story connecting perspective, materials, Villa 16, collected antiques and the next client conversation.
 - `/projects/nk-villa` — three chapters connecting concept, materials and execution to the evolution of Sixteen.
 - `/objects-of-desire` — a standing-position 360° antique room, four discoverable object silhouettes, accessible alternatives and a detail panel.
 - `/consultations` — service selection, demo calendar/time slots, client/project details and review; live calendar and studio email will be connected later.

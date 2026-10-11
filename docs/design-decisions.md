@@ -26,3 +26,7 @@ No downloaded template, purchased font, actual client plan or reference website 
 - The collection is a person’s standing POV with 360° looking around and a composition in each direction. Silhouette tint replaces plus markers.
 - Consultation must include calendar, time and client information in the prototype. The user explicitly deferred connecting studio email and live calendar until after prototype review.
 - Earlier rows describing a flat room/three plus markers and a two-step consultation preview are superseded by these corrections.
+
+## Continuous homepage revision
+
+The user rejected separate homepage sections. A single sticky image canvas now connects five beats: feeling → detail → Villa 16 → personal collection → client story. Image framing, crossfades and text move with native scrolling; no scroll hijacking or carousel timer is used. A chapter rail provides direct access, with a static reading alternative for reduced-motion users. Deployment to a client-accessible preview is now explicitly requested. GitHub source remains private.

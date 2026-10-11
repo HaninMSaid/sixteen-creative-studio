@@ -1810,3 +1810,328 @@ p {
     font-size: 7px;
   }
 }
+
+/* Continuous homepage: one camera-like canvas, five connected narrative beats. */
+body:has(.story-journey),
+body:has(.reduced-story) {
+  background: #25241e;
+}
+body:has(.story-journey) .site-header.over-image,
+body:has(.reduced-story) .site-header.over-image {
+  position: fixed;
+  background: linear-gradient(#211d1677, transparent);
+  border-bottom-color: #e7dfcf33;
+}
+body:has(.story-journey) .site-footer,
+body:has(.reduced-story) .site-footer {
+  color: #e9e1d0;
+  background: #25241e;
+  padding-top: 50px;
+}
+body:has(.story-journey) .site-footer .sample-note,
+body:has(.reduced-story) .site-footer .sample-note {
+  color: #a9a291;
+}
+.story-journey {
+  height: 540svh;
+  position: relative;
+  color: #f5efdf;
+  background: #25241e;
+}
+.studio-story-anchor {
+  position: absolute;
+  top: 110svh;
+  scroll-margin-top: 0;
+}
+.story-canvas {
+  height: 100svh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background: #25241e;
+}
+.story-images,
+.story-image,
+.story-shade {
+  position: absolute;
+  inset: 0;
+}
+.story-images {
+  overflow: hidden;
+}
+.story-image {
+  will-change: transform, opacity;
+}
+.story-image img {
+  object-fit: cover;
+}
+.story-shade {
+  background:
+    linear-gradient(90deg, #16140ed4 0%, #17140e80 43%, #17140e08 80%),
+    linear-gradient(
+      0deg,
+      #19170edb,
+      transparent 27%,
+      transparent 80%,
+      #16140e44
+    );
+  pointer-events: none;
+}
+.story-copy-stage {
+  position: absolute;
+  left: 7%;
+  right: 6%;
+  top: 26%;
+  bottom: 22%;
+}
+.story-beat {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.story-beat:not([inert]) {
+  pointer-events: auto;
+}
+.story-beat .eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: #dfd5be;
+}
+.story-beat h1 {
+  font-size: clamp(46px, 5.8vw, 94px);
+  line-height: 1.03;
+  margin: 25px 0 28px;
+  max-width: 1050px;
+  letter-spacing: -0.055em;
+  text-shadow: 0 1px 30px #0002;
+}
+.story-beat h1 em {
+  color: #f4ecd8;
+}
+.story-paragraph {
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 395px;
+  color: #dfd8c9;
+}
+.story-action {
+  align-self: flex-start;
+  margin-top: 26px;
+  padding: 9px 0;
+  border-bottom: 1px solid #cfbea3;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: #fff3dc;
+}
+.story-action:hover {
+  border-color: #fff;
+  color: white;
+}
+.story-rail {
+  position: absolute;
+  bottom: 47px;
+  left: 4%;
+  right: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+}
+.story-scroll-cue {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  max-width: 100px;
+  line-height: 1.7;
+  color: #d6cdbb;
+}
+.story-rail nav {
+  display: flex;
+  gap: 30px;
+  align-items: end;
+}
+.story-rail button {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: #cfc6b6;
+  font-size: 10px;
+  padding: 10px 0;
+  opacity: 0.65;
+  transition:
+    opacity 0.3s,
+    border-color 0.3s;
+}
+.story-rail button span {
+  font-size: 8px;
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  letter-spacing: 0.12em;
+}
+.story-rail button[aria-current] {
+  opacity: 1;
+  border-bottom-color: #e9dbc2;
+  color: #fff4de;
+}
+.story-rail button:hover {
+  opacity: 1;
+}
+.story-count {
+  font-family: var(--font-serif);
+  font-size: 29px;
+  white-space: nowrap;
+}
+.story-count i {
+  font-style: normal;
+  font-size: 14px;
+  color: #a79a83;
+}
+.story-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #d6c5a122;
+}
+.story-progress span {
+  display: block;
+  transform-origin: left;
+  height: 100%;
+  background: #d6c5a1;
+}
+.story-image-credit {
+  position: absolute;
+  bottom: 16px;
+  left: 4%;
+  font-size: 7px;
+  letter-spacing: 0.06em;
+  color: #c5bba8;
+  opacity: 0.7;
+}
+.reduced-story article {
+  position: relative;
+  min-height: 100svh;
+  color: #f5efdf;
+  display: flex;
+  align-items: center;
+  padding: 150px 8% 80px;
+  isolation: isolate;
+}
+.reduced-story article > img {
+  object-fit: cover;
+  z-index: -2;
+}
+.reduced-story article::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #18150e88;
+  z-index: -1;
+}
+.reduced-story article h1 {
+  font-size: clamp(45px, 6vw, 90px);
+  margin: 25px 0;
+}
+.reduced-story article p:not(.eyebrow) {
+  max-width: 420px;
+}
+.reduced-story .story-action {
+  display: inline-block;
+}
+@media (max-width: 900px) {
+  .story-rail nav {
+    gap: 18px;
+  }
+  .story-rail button {
+    font-size: 9px;
+  }
+  .story-copy-stage {
+    left: 6%;
+    top: 23%;
+    bottom: 25%;
+  }
+  .story-beat h1 {
+    font-size: clamp(44px, 6.3vw, 72px);
+  }
+  .story-scroll-cue {
+    font-size: 8px;
+    max-width: 75px;
+  }
+}
+@media (max-width: 600px) {
+  .story-journey {
+    height: 520svh;
+  }
+  .story-shade {
+    background:
+      linear-gradient(90deg, #18140eaa, #17140e33),
+      linear-gradient(0deg, #17140ef2, transparent 55%, #17140e55);
+  }
+  .story-copy-stage {
+    left: 6%;
+    right: 6%;
+    top: 25%;
+    bottom: 25%;
+  }
+  .story-beat h1 {
+    font-size: clamp(39px, 9.5vw, 56px);
+    margin: 18px 0 24px;
+  }
+  .story-beat .eyebrow {
+    font-size: 8px;
+  }
+  .story-paragraph {
+    font-size: 12px;
+    line-height: 1.75;
+    max-width: 290px;
+  }
+  .story-action {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+  .story-rail {
+    left: 6%;
+    right: 6%;
+    bottom: 44px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+  }
+  .story-scroll-cue {
+    max-width: none;
+    font-size: 8px;
+  }
+  .story-rail nav {
+    grid-column: 1/-1;
+    grid-row: 2;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .story-rail button {
+    font-size: 8px;
+    white-space: nowrap;
+  }
+  .story-rail button span {
+    font-size: 7px;
+  }
+  .story-count {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 22px;
+  }
+  .story-count i {
+    font-size: 11px;
+  }
+  .story-image-credit {
+    left: 6%;
+    font-size: 6px;
+  }
+  .reduced-story article {
+    padding: 130px 6% 70px;
+  }
+}
