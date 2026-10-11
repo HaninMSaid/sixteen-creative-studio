@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sixteen Creative Studio
 
-## Getting Started
+A focused, local-first client prototype built with Next.js App Router, TypeScript and Tailwind CSS. Architectural minimalism meets restrained editorial storytelling.
 
-First, run the development server:
+## Run and build
 
-```bash
+Use Node.js 24 LTS (the project was built with 24.14.1).
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Production output is a portable static website:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run build
+npm run preview
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The `out/` directory can be deployed to a static host supporting clean URLs. No server, secrets or database are needed. `next start` is not used with static export.
 
-## Learn More
+## Today's four destinations
 
-To learn more about Next.js, take a look at the following resources:
+- `/` — studio introduction, selected work, spatial collection preview and consultation invitation.
+- `/projects/nk-villa` — three chapters connecting concept, materials and execution to the evolution of Sixteen.
+- `/objects-of-desire` — a standing-position 360° antique room, four discoverable object silhouettes, accessible alternatives and a detail panel.
+- `/consultations` — service selection, demo calendar/time slots, client/project details and review; live calendar and studio email will be connected later.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Where to edit
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Location                 | Responsibility                                                               |
+| ------------------------ | ---------------------------------------------------------------------------- |
+| `src/app/`               | Route composition, page copy, metadata and shared layout                     |
+| `src/components/`        | Reusable editorial components and small interactive components               |
+| `src/data/studio.ts`     | Navigation, project chapters and consultation services                       |
+| `src/data/collection.ts` | Antique object records and panorama silhouette coordinates                   |
+| `src/data/booking.ts`    | Demonstration calendar and times                                             |
+| `src/types/content.ts`   | Typed content contracts                                                      |
+| `src/app/globals.css`    | Design tokens, named component styles, breakpoints and reduced motion        |
+| `public/images/`         | Locally served sample photography                                            |
+| `docs/`                  | Requirements, scope, decisions, sitemap, architecture, QA and GitHub handoff |
+| `references/`            | Reference index and image provenance; no private source documents copied     |
 
-## Deploy on Vercel
+Change an antique in `src/data/collection.ts`; the room and detail panel share that record. Polygon coordinates use normalized panorama image space. Recalibrate silhouettes when replacing the panorama. `panorama-room.tsx` maps the image to the inside of a sphere with Three.js and raycasts those silhouettes; it renders only on camera/pointer/resize changes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The page layouts use server components. Only navigation, opening scroll motion, reveal observation, the 360° room and consultation flow run in the browser. Plain CSS transitions avoid an unnecessary animation dependency. No commercial font or purchased template is embedded.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Prototype boundaries
+
+All imagery is temporary. The antique atelier and panorama are AI-generated concepts, not actual studio work or verified antiques. NK Villa's historical role is sourced from the supplied brief; the images and spatial diagram do not depict the actual villa. Objects, specifications and prices are illustrative. Client fields and selected filenames remain in transient page memory for review; they are never sent or persisted. No live commerce or booking exists. The site is marked `noindex` for review.
+
+Read [prototype scope](docs/prototype-scope.md), [design decisions](docs/design-decisions.md), [architecture](docs/architecture.md), [QA](docs/qa.md) and [GitHub steps](docs/github-setup.md).
