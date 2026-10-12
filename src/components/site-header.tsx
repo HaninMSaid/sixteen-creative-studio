@@ -38,14 +38,14 @@ export function SiteHeader() {
         aria-label="Main navigation"
       >
         {navigation.map((item) => (
-          <Link
+          <a
             key={item.href}
             href={item.href}
             aria-current={pathname === item.href ? "page" : undefined}
             onClick={() => setOpen(false)}
           >
             {item.label}
-          </Link>
+          </a>
         ))}
       </nav>
     </header>

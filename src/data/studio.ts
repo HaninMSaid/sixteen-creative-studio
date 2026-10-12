@@ -9,17 +9,17 @@ export const chapters: Chapter[] = [
   {
     number: "01",
     title: "An idea takes shape.",
-    text: "Every space begins with a way of living. Concept and drawings establish the relationships between rooms, proportions and the everyday.",
+    text: "A way of living, translated into space.",
   },
   {
     number: "02",
     title: "A language of materials.",
-    text: "Stone, wood and fabric bring the drawing into the physical world. The story moves closer: to a surface, a junction, the meeting of light and texture.",
+    text: "Stone, timber and linen. Texture meets light.",
   },
   {
     number: "03",
     title: "From detail to real life.",
-    text: "Design and execution come together in the completed ground-floor interior. NK Villa became a defining chapter in the evolution from New Address to Sixteen Creative Studio.",
+    text: "The project that shaped a new chapter for Sixteen.",
   },
 ];
 export const consultationServices = [
