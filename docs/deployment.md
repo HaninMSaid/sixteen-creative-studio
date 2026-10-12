@@ -1,6 +1,6 @@
 # Client preview deployment
 
-The user explicitly requested a live, client-accessible preview and GitHub/Vercel setup if needed. Account connections are pending; no live URL is claimed until the deployment succeeds.
+The user explicitly requested a live, client-accessible preview and GitHub/Vercel setup if needed. The client preview is deployed at https://sixteen-creative-studio.vercel.app.
 
 ## Prepared configuration
 
@@ -23,4 +23,12 @@ Prototype boundaries remain: generated/sample imagery, demo availability, no ema
 
 Private repository: https://github.com/HaninMSaid/sixteen-creative-studio
 
-Original prototype uploaded at `e23883e` before further edits. Vercel deployment pending authorization and validation.
+Original prototype uploaded at `e23883e` before further edits. Vercel deployed successfully; all five public routes and the entrance image returned HTTP 200 without authentication.
+
+## Verified deployment
+
+- URL: https://sixteen-creative-studio.vercel.app
+- Source commit: `e1045fd`
+- Deployment: `dpl_BVyqQzGNBb16i3RX2YSAvZbzoy3t`
+- Vercel production build passed.
+- GitHub source is private. Automatic GitHub deployment linking requires the GitHub login connection in Vercel; current release was uploaded through the authenticated CLI.
