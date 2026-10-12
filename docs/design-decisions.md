@@ -42,3 +42,7 @@ The user's requested opening is a dark metal house number 16 with an amber downl
 ## Separate studio and quieter selected work
 
 The wordmark returns to the homepage story. The Studio menu entry now opens `/studio`. Selected work uses full images, two short captions and a project invitation. The menu retains the wordmark’s serif family with larger type, tighter letter spacing and more space between links.
+
+## Restored project studies
+
+Selected Work returns to the original blueprint, material studies and chapter layout at the user’s request, retaining shorter captions. Menu items are 20px. Menu destinations use ordinary anchors for reliable full-page navigation on the static deployment and close on selection.
