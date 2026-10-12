@@ -1,6 +1,6 @@
 import type { Chapter } from "@/types/content";
 export const navigation = [
-  { href: "/#studio", label: "The studio" },
+  { href: "/studio", label: "The studio" },
   { href: "/projects/nk-villa", label: "Selected work" },
   { href: "/objects-of-desire", label: "Objects of desire" },
   { href: "/consultations", label: "Let’s begin" },

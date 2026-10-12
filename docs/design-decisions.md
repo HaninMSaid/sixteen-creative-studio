@@ -38,3 +38,7 @@ The user wants the prototype to look like the finished website, without guidance
 ## Entrance-led visual journey
 
 The user's requested opening is a dark metal house number 16 with an amber downlight and expressive cast shadows. The first scene has no visible headline; only the studio wordmark and Menu overlay the photograph. Five distinct images now connect the approach, doorway, material detail, Villa 16 reference and antique collection. New assets were generated for the entrance, interior threshold and material junction. They are concepts, not actual client photography.
+
+## Separate studio and quieter selected work
+
+The wordmark returns to the homepage story. The Studio menu entry now opens `/studio`. Selected work uses full images, two short captions and a project invitation. The menu retains the wordmark’s serif family with larger type, tighter letter spacing and more space between links.

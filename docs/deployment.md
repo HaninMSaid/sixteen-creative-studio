@@ -18,3 +18,9 @@ Configuration reference: https://vercel.com/docs/project-configuration/vercel-js
 - Record the actual repository, commit, deployment and URL here after success.
 
 Prototype boundaries remain: generated/sample imagery, demo availability, no email delivery, booking, payment or stored client information.
+
+## GitHub
+
+Private repository: https://github.com/HaninMSaid/sixteen-creative-studio
+
+Original prototype uploaded at `e23883e` before further edits. Vercel deployment pending authorization and validation.
